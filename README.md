@@ -1,4 +1,4 @@
-# What to do?
+ # What to do?
 The repo contains a skeleton of 4 Spring Boot applications, plus a Docker Compose configuration which spins up the following working environment.
 
 <img width="365" alt="image" src="https://user-images.githubusercontent.com/15728394/199699196-3bf20be2-cc51-4718-8cc2-454c8397c9d4.png">
@@ -87,6 +87,16 @@ The code requires the following tools:
 | Test adiclub-service endpoint from priority-sale-service container|```docker exec adidas-be-challenge-prioritysaleservice bash -c "curl -s adidas-be-challenge-adiclubservice:8080/adiclub?emailAddress=test1@gmail.com"```| should return a json response similar to: ```{"email":"test1@gmail.com",```<br>```"points":511,```<br>```"registrationDate":"2022-04-17T08:12:41.467026Z"```<br>```}```|
 | Access Open API documentation|Access via browser to: <br> ```http://localhost:8080/swagger-ui/index.html#/```|doc. should be displayed|
 | Watch public-service logs| ```docker logs -f adidas-be-challenge-publicservice``` | logs will be displayed|
+
+
+### 4. Prerequisite to Run
+
+ Create topic in kafka ``registration-events``` and ```email-events``
+
+```
+docker exec broker kafka-topics --bootstrap-server broker:9092 --create --topic registration-events
+docker exec broker kafka-topics --bootstrap-server broker:9092 --create --topic email-events
+```
 
 
 
