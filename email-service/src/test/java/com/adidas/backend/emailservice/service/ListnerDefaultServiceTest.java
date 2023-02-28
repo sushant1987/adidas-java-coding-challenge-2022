@@ -27,10 +27,10 @@ import com.adidas.backend.emailservice.communication.SendEmailService;
 class ListnerDefaultServiceTest {
 
 	@InjectMocks
-	public ListnerDefaultService listnerDefaultService;
+	ListnerDefaultService listnerDefaultService;
 
 	@Mock
-	public SendEmailService sendEmailService;
+	SendEmailService sendEmailService;
 
 	/**
 	 * @throws java.lang.Exception
