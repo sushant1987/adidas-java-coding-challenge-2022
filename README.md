@@ -91,7 +91,7 @@ The code requires the following tools:
 
 ### 4. Prerequisite to Run
 
- Create topic in kafka ``registration-events``` and ```email-events``
+ Create topic in kafka ``registration-events`` and ``email-events``
 
 ```
 docker exec broker kafka-topics --bootstrap-server broker:9092 --create --topic registration-events
